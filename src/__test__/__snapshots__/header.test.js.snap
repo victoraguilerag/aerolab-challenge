@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders 1`] = `
+<div
+  className="header"
+  style={
+    Object {
+      "alignItems": "center",
+      "background": "#ffffff",
+      "display": "flex",
+      "flexFlow": "row nowrap",
+      "height": "80px",
+      "justifyContent": "space-between",
+      "padding": "0 20px",
+    }
+  }
+>
+  <img
+    alt="brand logo"
+    className="logo"
+    height="36px"
+    src={Object {}}
+    width="39px"
+  />
+  <div
+    className="user-data"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+        "minWidth": "220px",
+      }
+    }
+  >
+    <p
+      className="user-name"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#616161",
+          "cursor": "pointer",
+          "fontSize": "24px",
+          "letterSpacing": "-0.15px",
+          "lineHeight": "48px",
+          "marginRight": "19px",
+          "textAlign": "left",
+          "userSelect": "none",
+        }
+      }
+    >
+      Patricio Estrella
+    </p>
+    <div
+      className="user-points"
+      style={
+        Object {
+          "alignItems": "center",
+          "background": "#ededed",
+          "borderRadius": "100px",
+          "display": "flex",
+          "height": "48px",
+          "justifyContent": "center",
+          "userSelect": "none",
+          "width": "103px",
+        }
+      }
+    >
+      <p
+        className="points"
+        style={
+          Object {
+            "color": "#616161",
+            "cursor": "pointer",
+            "fontSize": "24px",
+            "letterSpacing": "-0.15px",
+            "lineHeight": "48px",
+            "textAlign": "left",
+            "userSelect": "none",
+          }
+        }
+      >
+        2000
+      </p>
+      <img
+        alt="coin"
+        className="coin"
+        height="24px"
+        src={Object {}}
+        width="24px"
+      />
+    </div>
+  </div>
+</div>
+`;

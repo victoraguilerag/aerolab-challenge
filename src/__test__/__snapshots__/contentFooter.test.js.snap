@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content Options renders 1`] = `
+<div
+  className="content-footer"
+  style={
+    Object {
+      "alignItems": "center",
+      "borderBottom": "solid 1px #d9d9d9",
+      "display": "flex",
+      "height": "70px",
+      "justifyContent": "flex-start",
+      "margin": "0 auto",
+      "marginBottom": "100px",
+      "marginTop": "59px",
+      "maxWidth": "1176px",
+      "position": "relative",
+    }
+  }
+>
+  <p
+    className="products-count"
+    style={
+      Object {
+        "alignItems": "center",
+        "color": "#616161",
+        "display": "flex",
+        "fontSize": "24px",
+        "justifyContent": "center",
+        "letterSpacing": "-0.15px",
+        "lineHeight": "48px",
+        "margin": "0 10px",
+        "textAlign": "left",
+      }
+    }
+  >
+    2 of 16 items
+  </p>
+  <div
+    className="products-controls"
+    style={
+      Object {
+        "position": "absolute",
+        "right": "5px",
+      }
+    }
+  >
+    <img
+      alt="next"
+      className="next"
+      height="46px"
+      onClick={[Function]}
+      src={Object {}}
+      style={
+        Object {
+          "cursor": "pointer",
+          "margin": "0 10px",
+        }
+      }
+      width="46px"
+    />
+  </div>
+</div>
+`;

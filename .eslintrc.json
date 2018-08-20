@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-react"],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "15.0",
+      "flowVersion": "0.53"
+    },
+    "propWrapperFunctions": [ "forbidExtraProps" ]
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "jsx-quotes": [2, "prefer-double"]
+  },
+  "globals": {
+    "XMLHttpRequest": false,
+    "fetch": false
+  }
+}

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter renders 1`] = `
+<li
+  className="active-filter"
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "#0ad4fa",
+      "borderRadius": "100px",
+      "cursor": "pointer",
+      "height": "48px",
+      "margin": "0 5px",
+      "marginLeft": "2%",
+      "width": "163px",
+    }
+  }
+>
+  <p
+    className="active-filter-text"
+    style={
+      Object {
+        "alignItems": "center",
+        "color": "#ffffff",
+        "display": "flex",
+        "fontSize": "1em",
+        "height": "100%",
+        "justifyContent": "center",
+        "margin": "0",
+        "padding": "0 10px",
+        "textAlign": "center",
+        "userSelect": "none",
+      }
+    }
+  >
+    Test label
+  </p>
+</li>
+`;

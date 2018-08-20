@@ -1,0 +1,17 @@
+@media (max-width: 850px) {
+  .products-count {
+    display: none !important;
+  }
+  .divider {
+    display: none !important;
+  }
+  .filter, .active-filter {
+    width: 120px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .filters-label {
+    display: none !important;
+  }
+}

@@ -1,0 +1,396 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders 1`] = `
+<div
+  className="modal"
+  style={
+    Object {
+      "alignItems": "center",
+      "background": "rgba(0,0,0,.5)",
+      "display": "flex",
+      "height": "100vh",
+      "justifyContent": "center",
+      "left": "0",
+      "position": "fixed",
+      "top": "0",
+      "userSelect": "none",
+      "width": "100vw",
+    }
+  }
+>
+  <div
+    className="modal-container"
+    style={
+      Object {
+        "alignItems": "center",
+        "background": "#fff",
+        "borderRadius": "25px",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "80%",
+        "width": "93%",
+      }
+    }
+  >
+    <div
+      className="user-data"
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexFlow": "column",
+          "height": "80vh",
+          "justifyContent": "center",
+          "minWidth": "50%",
+        }
+      }
+    >
+      <p
+        className="user-name"
+        style={
+          Object {
+            "color": "#616161",
+            "fontSize": "24px",
+            "letterSpacing": "-0.15px",
+            "lineHeight": "48px",
+            "textAlign": "left",
+          }
+        }
+      >
+        Daniela Veliz
+      </p>
+      <div
+        className="user-points"
+        style={
+          Object {
+            "alignItems": "center",
+            "background": "#ededed",
+            "borderRadius": "100px",
+            "display": "flex",
+            "height": "45px",
+            "justifyContent": "center",
+            "width": "103px",
+          }
+        }
+      >
+        <p
+          className="points"
+          style={
+            Object {
+              "color": "#616161",
+              "fontSize": "24px",
+              "letterSpacing": "-0.15px",
+              "lineHeight": "48px",
+              "textAlign": "left",
+            }
+          }
+        >
+          2000
+        </p>
+        <img
+          alt="coin"
+          className="coin"
+          height="24px"
+          src={Object {}}
+          width="24px"
+        />
+      </div>
+      <div
+        className="reedem-buttom"
+        onClick={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundImage": "linear-gradient(-180deg, #0ad4fa 0%, #25bbf1 100%)",
+            "borderRadius": "5px",
+            "cursor": "pointer",
+            "display": "flex",
+            "height": "42px",
+            "justifyContent": "center",
+            "margin": "40px auto",
+            "width": "228px",
+          }
+        }
+      >
+        <p
+          className="reedem-text"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": "18px",
+              "letterSpacing": "-0.04px",
+              "textAlign": "center",
+            }
+          }
+        >
+          Return to catalog
+        </p>
+      </div>
+    </div>
+    <div
+      className="history"
+      style={
+        Object {
+          "alignItems": "center",
+          "borderLeft": "thin solid lightgray",
+          "color": "rgb(97, 97, 97)",
+          "display": "flex",
+          "flexFlow": "column",
+          "fontSize": "24px",
+          "height": "70vh",
+          "justifyContent": "center",
+          "letterSpacing": "-0.15px",
+          "lineHeight": "48px",
+          "position": "relative",
+          "textAlign": "left",
+          "width": "50%",
+        }
+      }
+    >
+      <div
+        className="history-label"
+        style={
+          Object {
+            "position": "absolute",
+            "top": "0",
+          }
+        }
+      >
+        Products redeem
+      </div>
+      <div
+        className="product-card"
+        style={
+          Object {
+            "background": "#ffffff",
+            "boxShadow": "2px 2px 4px 0 rgba(0,0,0,0.10)",
+            "cursor": "pointer",
+            "height": "276px",
+            "position": "relative",
+            "width": "276px",
+          }
+        }
+      >
+        <div
+          className="loader"
+        >
+          <div>
+            <svg
+              height="50"
+              viewBox="0 0 38 38"
+              width="100"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient
+                  id="a"
+                  x1="8.042%"
+                  x2="65.682%"
+                  y1="0%"
+                  y2="23.865%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="#00bfff"
+                    stopOpacity="0"
+                  />
+                  <stop
+                    offset="63.146%"
+                    stopColor="#00bfff"
+                    stopOpacity=".631"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="#00bfff"
+                  />
+                </linearGradient>
+              </defs>
+              <g
+                fill="none"
+                fillRule="evenodd"
+              >
+                <g
+                  transform="translate(1 1)"
+                >
+                  <path
+                    d="M36 18c0-9.94-8.06-18-18-18"
+                    id="Oval-2"
+                    stroke="url(#a)"
+                    strokeWidth="2"
+                  >
+                    <animateTransform
+                      attributeName="transform"
+                      dur="0.9s"
+                      from="0 18 18"
+                      repeatCount="indefinite"
+                      to="360 18 18"
+                      type="rotate"
+                    />
+                  </path>
+                  <circle
+                    cx="36"
+                    cy="18"
+                    fill="#fff"
+                    r="1"
+                  >
+                    <animateTransform
+                      attributeName="transform"
+                      dur="0.9s"
+                      from="0 18 18"
+                      repeatCount="indefinite"
+                      to="360 18 18"
+                      type="rotate"
+                    />
+                  </circle>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <img
+          alt="Algodon"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="asdas"
+          srcSet="asdas 2x"
+          style={
+            Object {
+              "background": "#ffffff",
+              "height": "182px",
+              "marginTop": "12px",
+              "pointerEvents": "none",
+              "width": "252px",
+            }
+          }
+        />
+        <div
+          className="productUnavailable"
+          style={
+            Object {
+              "alignItems": "center",
+              "background": "#616161",
+              "borderRadius": "100px",
+              "display": "flex",
+              "height": "42px",
+              "justifyContent": "center",
+              "opacity": "0.8",
+              "pointerEvents": "none",
+              "position": "absolute",
+              "right": "12px",
+              "top": "12px",
+              "width": "142px",
+            }
+          }
+        >
+          <p
+            className="productUnavailableText"
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontSize": "14px",
+                "letterSpacing": "-0.03px",
+                "textAlign": "right",
+              }
+            }
+          >
+            3000
+          </p>
+          <img
+            alt="coin"
+            className="productUnavailableCoin"
+            height="24px"
+            src={Object {}}
+            style={
+              Object {
+                "height": "20px",
+                "margin": "0 2.5px",
+                "width": "20px",
+              }
+            }
+            width="24px"
+          />
+        </div>
+        <div
+          className="product-info"
+          style={
+            Object {
+              "bottom": "15px",
+              "left": "24px",
+              "pointerEvents": "none",
+              "position": "absolute",
+            }
+          }
+        >
+          <div
+            className="product-category"
+            style={
+              Object {
+                "color": "#a3a3a3",
+                "fontSize": "16px",
+                "letterSpacing": "-0.04px",
+                "pointerEvents": "none",
+                "textAlign": "left",
+              }
+            }
+          >
+            personal health
+          </div>
+          <div
+            className="product-name"
+            style={
+              Object {
+                "color": "#616161",
+                "fontSize": "18px",
+                "letterSpacing": "-0.04px",
+                "pointerEvents": "none",
+                "textAlign": "left",
+              }
+            }
+          >
+            Algodon
+          </div>
+        </div>
+      </div>
+      <div
+        className="controls"
+        style={
+          Object {
+            "bottom": "0",
+            "display": "flex",
+            "justifyContent": "space-around",
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      >
+        <img
+          alt="previus"
+          className="previus"
+          height="46px"
+          onClick={[Function]}
+          src={Object {}}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          width="46px"
+        />
+        <img
+          alt="next"
+          className="next"
+          height="46px"
+          onClick={[Function]}
+          src={Object {}}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          width="46px"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

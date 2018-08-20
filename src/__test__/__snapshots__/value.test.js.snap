@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Value renders 1`] = `
+<div
+  className="active-value"
+  style={
+    Object {
+      "background": "#0ad4fa",
+      "borderRadius": "100px",
+      "cursor": "pointer",
+      "height": "40px",
+      "margin": "0 5px",
+    }
+  }
+>
+  <div
+    className="active-value-text"
+    onClick={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "color": "#ffffff",
+        "display": "flex",
+        "fontSize": "1em",
+        "height": "100%",
+        "justifyContent": "center",
+        "margin": "0 10px",
+        "textAlign": "center",
+      }
+    }
+  >
+    1000
+    <img
+      alt="coin"
+      className="coin"
+      height="24px"
+      src={Object {}}
+      style={
+        Object {
+          "margin": "0 3px",
+        }
+      }
+      width="24px"
+    />
+  </div>
+</div>
+`;

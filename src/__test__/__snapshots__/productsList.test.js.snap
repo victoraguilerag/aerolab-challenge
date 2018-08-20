@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product List renders 1`] = `
+<div
+  className="product-list"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "row wrap",
+      "justifyContent": "space-around",
+      "margin": "0 auto",
+      "maxWidth": "1176px",
+    }
+  }
+/>
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner renders 1`] = `
+<div
+  className="Banner"
+  style={
+    Object {
+      "marginBottom": "48px",
+      "position": "relative",
+      "userSelect": "none",
+    }
+  }
+>
+  <img
+    alt="banner background"
+    src={Object {}}
+    srcSet="[object Object] 2x"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  />
+  <h1
+    style={
+      Object {
+        "bottom": "10.5%",
+        "color": "#ffffff",
+        "fontSize": "64px",
+        "left": "11%",
+        "position": "absolute",
+        "textAlign": "left",
+      }
+    }
+  >
+    Electronics
+  </h1>
+</div>
+`;
