@@ -25,6 +25,7 @@
     "test:watch": "jest --watch",
     "eject": "react-scripts eject"
   },
+  "homepage": "./",
   "jest": {
     "moduleNameMapper": {
       "\\.(png|jpg|gif|ttf|eot|svg)$": "<rootDir>/config/jest/fileMock.js",
