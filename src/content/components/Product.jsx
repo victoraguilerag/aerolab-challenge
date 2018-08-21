@@ -23,6 +23,7 @@ class Product extends Component {
       handleRedeemProduct,
       handleModal
     } = this.props
+
     const id = info.get('_id')
     const name = info.get('name')
     const category = info.get('category')

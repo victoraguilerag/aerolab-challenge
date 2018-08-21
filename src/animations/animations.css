@@ -26,11 +26,11 @@
 }
 
 .product-leave {
-  transform: translateY(-1000);
+  opacity: 1;
 }
 
 .product-leave.product-leave-active {
-  transform: translateY(0);
+  opacity: 0;
 }
 
 .loader-enter {
