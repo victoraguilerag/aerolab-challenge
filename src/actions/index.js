@@ -32,7 +32,7 @@ export const redeemProduct = id => {
     const reedemed = await postProduct(id)
     dispatch(toggleMessage(reedemed.message))
     dispatch(updateModal('history'))
-    setTimeout(() => dispatch(toggleMessage()), 4000)
+    setTimeout(() => dispatch(toggleMessage(' ')), 4000)
   }
 }
 

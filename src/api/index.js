@@ -82,7 +82,7 @@ export const postProduct = async (id) => {
     method: 'POST',
     withCredentials: true,
     body: JSON.stringify({
-      'amount': {
+      'productId': {
         id
       }
     }),
