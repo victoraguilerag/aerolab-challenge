@@ -5,7 +5,9 @@ import coin from '../../icons/coin.svg'
 
 function Header (props) {
   const { handleModal } = props
-  const { name, points } = props.user
+  const { user } = props
+  const name = user.get('name')
+  const points = user.get('points')
   return (
     <div className="header" style={styles.header}>
       <img

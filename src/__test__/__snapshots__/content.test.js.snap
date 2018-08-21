@@ -28,7 +28,7 @@ exports[`Content renders 1`] = `
       }
     >
       <div
-        className="products-count"
+        className="products-count-options"
         style={
           Object {
             "alignItems": "center",
@@ -976,7 +976,7 @@ exports[`Content renders 1`] = `
     }
   >
     <p
-      className="products-count"
+      className="products-count-footer"
       style={
         Object {
           "alignItems": "center",

@@ -23,7 +23,13 @@ class Product extends Component {
       handleRedeemProduct,
       handleModal
     } = this.props
-    const { _id: id, name, category, img, cost } = info
+    const id = info.get('_id')
+    const name = info.get('name')
+    const category = info.get('category')
+    const url = info.get('img').get('url')
+    const hdUrl = info.get('img').get('hdUrl')
+    const cost = info.get('cost')
+
     const affortable = (coins >= cost)
     return (
       <div
@@ -45,7 +51,7 @@ class Product extends Component {
             />
           </div>
         }
-        <img src={img.url} srcSet={`${img.hdUrl} 2x`} alt={name} style={styles.productImage} onLoad={() => this.showImage()} onError={() => this.showImage()} />
+        <img src={url} srcSet={`${hdUrl} 2x`} alt={name} style={styles.productImage} onLoad={() => this.showImage()} onError={() => this.showImage()} />
         {
           !affortable &&
           <div className="productUnavailable" style={styles.productUnavailable}>

@@ -1,9 +1,11 @@
 import React from 'react'
 import { History } from '../modal/components/History.jsx'
 import renderer from 'react-test-renderer'
+import { fromJS } from 'immutable'
 import productsStub from '../stub/products.js'
 
 const functionMock = () => console.log('function mock');
+const products = fromJS(productsStub)
 
 test('History renders', () => {
   const component = renderer.create(
@@ -11,7 +13,7 @@ test('History renders', () => {
       fetchHistory={functionMock}
       previousHistoryItem={functionMock}
       nextHistoryItem={functionMock}
-      history={productsStub}
+      history={products}
       historyIndex={1}
       loadingHistory={false}
     />,

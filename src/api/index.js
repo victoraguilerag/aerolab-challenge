@@ -11,12 +11,11 @@ export const getUser = async () => {
       'Accept': 'application/json',
       'Authorization': `Bearer ${credentials}`
     }
-  }).then(response => {
-    return response.json()
-  }, error => {
-    console.log(error)
-    return userStub
-  })
+  }).then(response => response.json())
+    .catch(error => {
+      console.log(error)
+      return userStub
+    })
 
   return user
 }
@@ -30,18 +29,17 @@ export const getProducts = async () => {
       'Accept': 'application/json',
       'Authorization': `Bearer ${credentials}`
     }
-  }).then(response => {
-    return response.json()
-  }, error => {
-    console.log(error)
-    return productsStub
-  })
+  }).then(response => response.json())
+    .catch(error => {
+      console.log(error)
+      return productsStub
+    })
 
   return productList
 }
 
 export const getHistory = async () => {
-  let history = await fetch('https://aerolab-challenge.now.sh/user/history', {
+  let history = await fetch('https://aerolab-challenge.now.sh/history', {
     method: 'GET',
     withCredentials: true,
     headers: {
@@ -49,12 +47,11 @@ export const getHistory = async () => {
       'Accept': 'application/json',
       'Authorization': `Bearer ${credentials}`
     }
-  }).then(response => {
-    return response.json()
-  }, error => {
-    console.log(error)
-    return productsStub
-  })
+  }).then(response => response.json())
+    .catch(error => {
+      console.log(error)
+      return []
+    })
 
   return history
 }
@@ -71,10 +68,11 @@ export const postPoints = async (points) => {
       'Accept': 'application/json',
       'Authorization': `Bearer ${credentials}`
     }
-  }).then(res => res.json(), error => {
-    console.log(error)
-    return error
-  })
+  }).then(res => res.json())
+    .catch(error => {
+      console.log(error)
+      return error
+    })
 
   return addedPoints
 }
@@ -93,10 +91,11 @@ export const postProduct = async (id) => {
       'Accept': 'application/json',
       'Authorization': `Bearer ${credentials}`
     }
-  }).then(res => res.json(), error => {
-    console.log(error)
-    return productsStub
-  })
+  }).then(res => res.json())
+    .catch(error => {
+      console.log(error)
+      return productsStub
+    })
 
   return redeemedProduct
 }

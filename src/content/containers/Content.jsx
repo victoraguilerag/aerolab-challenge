@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Immutable from 'immutable'
 import { connect } from 'react-redux'
 import {
   updateFilter,
@@ -37,15 +38,15 @@ export class Content extends Component {
       page
     } = this.props
     const prev = (page > 1)
-    const next = (products.length > limit * page)
+    const next = (products.size > limit * page)
     const pageLength = page * limit
-    const pageProducts = Object.assign([], orderProducts(products, filter).slice((page - 1) * limit, page * limit))
+    const pageProducts = orderProducts(products, filter).slice((page - 1) * limit, page * limit)
 
     return (
       <div className="content">
         <ContentOptions
           pageLength={pageLength}
-          productsLength={products.length}
+          productsLength={products.size}
           activeFilter={filter}
           filters={filters}
           handleFilterChange={this.handleFilterChange}
@@ -63,7 +64,7 @@ export class Content extends Component {
         />
         <ContentFooter
           pageLength={pageLength}
-          productsLength={products.length}
+          productsLength={products.size}
           prev={prev}
           handlePreviousPage={this.handlePreviousPage}
           next={next}
@@ -80,20 +81,20 @@ Content.propTypes = {
   nextPage: PropTypes.func.isRequired,
   coins: PropTypes.number.isRequired,
   handleModal: PropTypes.func.isRequired,
-  products: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  products: PropTypes.instanceOf(Immutable.List).isRequired,
   limit: PropTypes.number.isRequired,
-  filters: PropTypes.array.isRequired,
+  filters: PropTypes.instanceOf(Immutable.List).isRequired,
   filter: PropTypes.string.isRequired,
   page: PropTypes.number.isRequired
 }
 
 const mapStateToProps = (state, props) => {
   return {
-    products: state.products,
-    limit: state.limit,
-    filters: state.filters,
-    filter: state.filter,
-    page: state.page
+    products: state.get('products').get('products'),
+    limit: state.get('products').get('limit'),
+    filters: state.get('products').get('filters'),
+    filter: state.get('products').get('filter'),
+    page: state.get('products').get('page')
   }
 }
 

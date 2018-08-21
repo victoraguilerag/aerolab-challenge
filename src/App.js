@@ -32,7 +32,8 @@ class App extends Component {
       loading,
       showMessage
     } = this.props
-    console.log(showMessage)
+    const points = user.get('points')
+
     return (
       <div className="App" style={styles.app}>
         <CSSTransitionGroup
@@ -48,9 +49,9 @@ class App extends Component {
         <Header handleModal={this.handleModal} user={user} />
         <Banner section="Electronics" />
         {
-          user.points &&
+          points &&
           <Content
-            coins={user.points}
+            coins={points}
             handleModal={this.handleModal}
           />
         }
@@ -61,7 +62,12 @@ class App extends Component {
         >
           {
             modal &&
-            <Modal user={user} mode={modalMode} handleModal={this.handleModal} />
+            <Modal
+              user={user}
+              mode={modalMode}
+              handleModal={this.handleModal}
+              showMessage={showMessage}
+            />
           }
         </CSSTransitionGroup>
         <CSSTransitionGroup
@@ -98,11 +104,11 @@ App.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user,
-    modal: state.modal,
-    modalMode: state.modalMode,
-    loading: state.loading,
-    showMessage: state.showMessage
+    user: state.get('user'),
+    modal: state.get('modal').get('modal'),
+    modalMode: state.get('modal').get('modalMode'),
+    loading: state.get('user').get('loading'),
+    showMessage: state.get('message').get('showMessage')
   }
 }
 

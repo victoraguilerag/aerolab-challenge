@@ -19,7 +19,7 @@ exports[`Content Options renders 1`] = `
   }
 >
   <p
-    className="products-count"
+    className="products-count-footer"
     style={
       Object {
         "alignItems": "center",

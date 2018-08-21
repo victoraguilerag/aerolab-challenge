@@ -1,11 +1,12 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
+import  { fromJS } from 'immutable'
 import Product from '../content/components/Product.jsx'
 import productsStub from '../stub/products.js'
-import renderer from 'react-test-renderer'
 
 const coins = 2000
 const selected = true
-const info = productsStub[0]
+const info = fromJS(productsStub[0])
 const functionMock = () => console.log('mock')
 
 test('Product renders', () => {

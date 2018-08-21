@@ -94,8 +94,7 @@ exports[`Hitory Product renders 1`] = `
     alt="Secador de Cabello"
     onError={[Function]}
     onLoad={[Function]}
-    src="asdas"
-    srcSet="asdas 2x"
+    srcSet="undefined 2x"
     style={
       Object {
         "background": "#ffffff",

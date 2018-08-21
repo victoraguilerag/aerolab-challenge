@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Immutable from 'immutable'
 import PropTypes from 'prop-types'
 import Loader from 'react-loader-spinner'
 import coin from '../../icons/coin.svg'
@@ -14,11 +15,12 @@ export class HistoryProduct extends Component {
   }
   render () {
     const {
-      name,
-      category,
-      img,
-      cost
-    } = this.props.info
+      info
+    } = this.props
+    const name = info.get('name')
+    const category = info.get('category')
+    const img = info.get('img')
+    const cost = info.get('cost')
     return (
       <div className="product-card" style={styles.productCard} >
         {
@@ -128,15 +130,7 @@ const styles = {
 }
 
 HistoryProduct.propTypes = {
-  info: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    img: PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      hdUrl: PropTypes.string.isRequired
-    }),
-    cost: PropTypes.number.isRequired
-  })
+  info: PropTypes.instanceOf(Immutable.Map).isRequired
 }
 
 export default HistoryProduct

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import coin from '../../icons/coin.svg'
 
 export function ModalLayout (props) {
-  const { handleModal, user: { name, points } } = props
+  const { handleModal, user } = props
+  const name = user.get('name')
+  const points = user.get('points')
   return (
     <div className="modal" style={styles.modal}>
       <div className="modal-container" style={styles.modalContainer}>

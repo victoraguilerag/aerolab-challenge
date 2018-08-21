@@ -14,7 +14,10 @@ export class Modal extends Component {
     this.props.updateSelectedValue(value)
   }
   handleAddPoints = () => {
-    this.props.addPoints()
+    const { showMessage } = this.props
+    if (!showMessage) {
+      this.props.addPoints()
+    }
   }
   render () {
     const { handleModal, user, mode } = this.props
@@ -39,7 +42,8 @@ Modal.propTypes = {
   addPoints: PropTypes.func.isRequired,
   handleModal: PropTypes.func.isRequired,
   user: PropTypes.shape({}).isRequired,
-  mode: PropTypes.string.isRequired
+  mode: PropTypes.string.isRequired,
+  showMessage: PropTypes.bool.isRequired
 }
 
 const mapDispatchToProps = (dispatch) => {

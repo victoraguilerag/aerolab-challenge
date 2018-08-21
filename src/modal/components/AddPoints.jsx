@@ -90,7 +90,7 @@ AddPoints.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    selectedValue: state.selectedValue
+    selectedValue: state.get('modal').get('selectedValue')
   }
 }
 

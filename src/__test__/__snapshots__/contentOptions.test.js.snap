@@ -25,7 +25,7 @@ exports[`Content Options renders 1`] = `
     }
   >
     <div
-      className="products-count"
+      className="products-count-options"
       style={
         Object {
           "alignItems": "center",
@@ -92,7 +92,116 @@ exports[`Content Options renders 1`] = `
             "padding": "0",
           }
         }
-      />
+      >
+        <li
+          className="filter"
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "#ededed",
+              "borderRadius": "100px",
+              "cursor": "pointer",
+              "height": "48px",
+              "margin": "0 5px",
+              "marginLeft": "2%",
+              "userSelect": "none",
+              "width": "163px",
+            }
+          }
+        >
+          <p
+            className="filter-text"
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "#a3a3a3",
+                "display": "flex",
+                "fontSize": "1em",
+                "height": "100%",
+                "justifyContent": "center",
+                "margin": "0",
+                "padding": "0 10px",
+                "textAlign": "center",
+                "userSelect": "none",
+              }
+            }
+          >
+            Most recent
+          </p>
+        </li>
+        <li
+          className="filter"
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "#ededed",
+              "borderRadius": "100px",
+              "cursor": "pointer",
+              "height": "48px",
+              "margin": "0 5px",
+              "marginLeft": "2%",
+              "userSelect": "none",
+              "width": "163px",
+            }
+          }
+        >
+          <p
+            className="filter-text"
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "#a3a3a3",
+                "display": "flex",
+                "fontSize": "1em",
+                "height": "100%",
+                "justifyContent": "center",
+                "margin": "0",
+                "padding": "0 10px",
+                "textAlign": "center",
+                "userSelect": "none",
+              }
+            }
+          >
+            Lowest price
+          </p>
+        </li>
+        <li
+          className="filter"
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "#ededed",
+              "borderRadius": "100px",
+              "cursor": "pointer",
+              "height": "48px",
+              "margin": "0 5px",
+              "marginLeft": "2%",
+              "userSelect": "none",
+              "width": "163px",
+            }
+          }
+        >
+          <p
+            className="filter-text"
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "#a3a3a3",
+                "display": "flex",
+                "fontSize": "1em",
+                "height": "100%",
+                "justifyContent": "center",
+                "margin": "0",
+                "padding": "0 10px",
+                "textAlign": "center",
+                "userSelect": "none",
+              }
+            }
+          >
+            Highest price
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
   <div

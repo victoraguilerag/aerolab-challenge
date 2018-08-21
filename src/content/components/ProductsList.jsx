@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Immutable from 'immutable'
 import {
   updateSelectedItem,
   redeemProduct
@@ -27,9 +28,8 @@ export class ProductsList extends Component {
       selectedItem
     } = this.props
     const productsComponents = products.map((product, index) => {
-      const { _id: id } = product
+      const id = product.get('_id')
       const selected = (selectedItem === id)
-
       return (
         <CSSTransitionGroup
           transitionName="product"
@@ -73,14 +73,14 @@ ProductsList.propTypes = {
   selectedItem: PropTypes.string.isRequired,
   updateSelectedItem: PropTypes.func.isRequired,
   redeemProduct: PropTypes.func.isRequired,
-  products: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  products: PropTypes.instanceOf(Immutable.List).isRequired,
   coins: PropTypes.number.isRequired,
   handleModal: PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => {
   return {
-    selectedItem: state.selectedItem
+    selectedItem: state.get('products').get('selectedItem')
   }
 }
 

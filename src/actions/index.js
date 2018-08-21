@@ -1,4 +1,5 @@
 import { getUser, getProducts, getHistory, postProduct, postPoints } from '../api'
+import actionTypes from '../constants/action-types.js'
 
 export const fetchProductList = () => {
   return async (dispatch) => {
@@ -28,9 +29,7 @@ export const fetchHistory = () => {
 
 export const redeemProduct = id => {
   return async (dispatch) => {
-    console.log('reedeming product' + id)
     const reedemed = await postProduct(id)
-    console.log(reedemed)
     dispatch(toggleMessage(reedemed.message))
     dispatch(updateModal('history'))
     setTimeout(() => dispatch(toggleMessage()), 4000)
@@ -40,18 +39,17 @@ export const redeemProduct = id => {
 export const addPoints = () => {
   return async (dispatch) => {
     const addedPoints = await postPoints()
-    console.log(addedPoints)
     dispatch(toggleMessage(addedPoints.message))
     dispatch(updateUserPoints(addedPoints['new Points']))
     setTimeout(() => {
-      dispatch(toggleMessage())
-    }, 4000)
+      dispatch(toggleMessage(' '))
+    }, 3000)
   }
 }
 
 export const updateUserPoints = (points) => {
   return {
-    type: 'UPDATE_USER_POINTS',
+    type: actionTypes.UPDATE_USER_POINTS,
     payload: {
       points
     }
@@ -60,7 +58,7 @@ export const updateUserPoints = (points) => {
 
 export const updateUser = (user) => {
   return {
-    type: 'UPDATE_USER',
+    type: actionTypes.UPDATE_USER,
     payload: {
       user
     }
@@ -69,7 +67,7 @@ export const updateUser = (user) => {
 
 export const updateProducts = (products) => {
   return {
-    type: 'UPDATE_PRODUCTS',
+    type: actionTypes.UPDATE_PRODUCTS,
     payload: {
       products
     }
@@ -78,7 +76,7 @@ export const updateProducts = (products) => {
 
 export const updateFilter = (filter) => {
   return {
-    type: 'UPDATE_FILTER',
+    type: actionTypes.UPDATE_FILTER,
     payload: {
       filter
     }
@@ -87,19 +85,19 @@ export const updateFilter = (filter) => {
 
 export const previousPage = () => {
   return {
-    type: 'PREVIOUS_PAGE'
+    type: actionTypes.PREVIOUS_PAGE
   }
 }
 
 export const nextPage = () => {
   return {
-    type: 'NEXT_PAGE'
+    type: actionTypes.NEXT_PAGE
   }
 }
 
 export const updateSelectedItem = id => {
   return {
-    type: 'UPDATE_SELECTED',
+    type: actionTypes.UPDATE_SELECTED,
     payload: {
       id
     }
@@ -107,9 +105,8 @@ export const updateSelectedItem = id => {
 }
 
 export const updateModal = mode => {
-  console.log(mode)
   return {
-    type: 'UPDATE_MODAL',
+    type: actionTypes.UPDATE_MODAL,
     payload: {
       mode
     }
@@ -118,7 +115,7 @@ export const updateModal = mode => {
 
 export const updateLoading = loading => {
   return {
-    type: 'UPDATE_LOADING',
+    type: actionTypes.UPDATE_LOADING,
     payload: {
       loading
     }
@@ -127,7 +124,7 @@ export const updateLoading = loading => {
 
 export const updateHistory = history => {
   return {
-    type: 'UPDATE_HISTORY',
+    type: actionTypes.UPDATE_HISTORY,
     payload: {
       history
     }
@@ -136,7 +133,7 @@ export const updateHistory = history => {
 
 export const updateLoadingHistory = loadingHistory => {
   return {
-    type: 'UPDATE_LOADING_HISTORY',
+    type: actionTypes.UPDATE_LOADING_HISTORY,
     payload: {
       loadingHistory
     }
@@ -145,19 +142,19 @@ export const updateLoadingHistory = loadingHistory => {
 
 export const previousHistoryItem = () => {
   return {
-    type: 'PREVIOUS_HISTORY_ITEM'
+    type: actionTypes.PREVIOUS_HISTORY_ITEM
   }
 }
 
 export const nextHistoryItem = () => {
   return {
-    type: 'NEXT_HISTORY_ITEM'
+    type: actionTypes.NEXT_HISTORY_ITEM
   }
 }
 
 export const updateSelectedValue = selectedValue => {
   return {
-    type: 'UPDATE_SELECTED_VALUE',
+    type: actionTypes.UPDATE_SELECTED_VALUE,
     payload: {
       selectedValue
     }
@@ -166,7 +163,7 @@ export const updateSelectedValue = selectedValue => {
 
 export const toggleMessage = message => {
   return {
-    type: 'TOGGLE_MESSAGE',
+    type: actionTypes.TOGGLE_MESSAGE,
     payload: {
       message
     }

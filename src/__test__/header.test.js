@@ -1,12 +1,14 @@
 import React from 'react'
-import Header from '../header/components/Header.jsx'
 import renderer from 'react-test-renderer'
+import { fromJS } from 'immutable'
+import Header from '../header/components/Header.jsx'
+
 
 const functionMock = () => console.log('mock')
-const user = {
+const user = fromJS({
   name: 'Patricio Estrella',
   points: 2000
-}
+})
 
 test('Header renders', () => {
   const component = renderer.create(

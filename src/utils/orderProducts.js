@@ -1,6 +1,9 @@
+import { fromJS } from 'immutable'
+
 const orderProducts = (products, filter) => {
+  products = products.toJS()
   switch (filter) {
-    case 'Most recent':
+    case 'Most recent': {
       let aux = []
       for (let i = 0; i <= products.length; i++) {
         for (let j = i + 1; j < products.length; j++) {
@@ -11,7 +14,8 @@ const orderProducts = (products, filter) => {
           }
         }
       }
-      return products
+      return fromJS(products)
+    }
     case 'Lowest price': {
       let aux
       for (let i = 0; i <= products.length; i++) {
@@ -23,7 +27,7 @@ const orderProducts = (products, filter) => {
           }
         }
       }
-      return products
+      return fromJS(products)
     }
     case 'Highest price': {
       let aux
@@ -36,10 +40,10 @@ const orderProducts = (products, filter) => {
           }
         }
       }
-      return products
+      return fromJS(products)
     }
     default:
-      return products
+      return fromJS(products)
   }
 }
 

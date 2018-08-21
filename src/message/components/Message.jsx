@@ -37,7 +37,7 @@ Message.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    message: state.message
+    message: state.get('message').get('message')
   }
 }
 

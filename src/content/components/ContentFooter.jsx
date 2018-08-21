@@ -23,7 +23,7 @@ function ContentFooter (props) {
   } = props
   return (
     <div className="content-footer" style={styles.contentFooter}>
-      <p className="products-count" style={styles.productCount}>
+      <p className="products-count-footer" style={styles.productCount}>
         {`${pageLength} of ${productsLength} items`}
       </p>
       <div className="products-controls" style={styles.productsControls}>

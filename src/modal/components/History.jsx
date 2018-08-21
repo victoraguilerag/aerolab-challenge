@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Immutable from 'immutable'
 import { connect } from 'react-redux'
 import Loader from 'react-loader-spinner'
 import {
@@ -26,10 +27,9 @@ export class History extends Component {
 
   render () {
     const { history, historyIndex, loadingHistory } = this.props
-    const item = history[historyIndex]
-    const next = (historyIndex < history.length - 1)
+    const item = (history.size > 0) ? history.get(historyIndex) : null
+    const next = (historyIndex < history.size - 1)
     const previous = (historyIndex > 0)
-
     if (loadingHistory) {
       return (
         <div className="history" style={styles.history}>
@@ -42,7 +42,7 @@ export class History extends Component {
         </div>
       )
     }
-    if (history.length < 1) {
+    if (!item) {
       return (
         <div className="history-empty" style={styles.history}>
           No products reedemed
@@ -54,7 +54,7 @@ export class History extends Component {
         <div className="history-label" style={styles.historyLabel}>
           Products redeem
         </div>
-        <Product key={item._id} info={item} />
+        <Product info={item} />
         <div className="controls" style={styles.controls}>
           {
             previous &&
@@ -122,7 +122,7 @@ History.propTypes = {
   fetchHistory: PropTypes.func.isRequired,
   previousHistoryItem: PropTypes.func.isRequired,
   nextHistoryItem: PropTypes.func.isRequired,
-  history: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  history: PropTypes.instanceOf(Immutable.List).isRequired,
   historyIndex: PropTypes.number.isRequired,
   loadingHistory: PropTypes.bool.isRequired
 }
@@ -137,9 +137,9 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
-    history: state.history,
-    historyIndex: state.historyIndex,
-    loadingHistory: state.loadingHistory
+    history: state.get('modal').get('history'),
+    historyIndex: state.get('modal').get('historyIndex'),
+    loadingHistory: state.get('modal').get('loadingHistory')
   }
 }
 

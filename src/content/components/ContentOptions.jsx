@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Immutable from 'immutable'
 import '../../stylesheet/responsive-stylesheet.css'
 import Filter from './Filter.jsx'
 import previusIcon from '../../icons/arrow-left.svg'
@@ -20,7 +21,7 @@ function ContentOptions (props) {
   return (
     <div className="content-options" style={styles.contentOptions}>
       <div className="options" style={styles.options}>
-        <div className="products-count" style={styles.productsCount}>
+        <div className="products-count-options" style={styles.productsCount}>
           {`${pageLength} of ${productsLength} items`}
         </div>
         <div className="divider" style={styles.divider} />
@@ -141,7 +142,7 @@ ContentOptions.propTypes = {
   handleNextPage: PropTypes.func.isRequired,
   pageLength: PropTypes.number.isRequired,
   productsLength: PropTypes.number.isRequired,
-  filters: PropTypes.arrayOf(PropTypes.string).isRequired,
+  filters: PropTypes.instanceOf(Immutable.List).isRequired,
   activeFilter: PropTypes.string.isRequired,
   handleFilterChange: PropTypes.func.isRequired
 }
