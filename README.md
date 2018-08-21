@@ -1,6 +1,6 @@
 Este proyecto es un challenge realizado por [Aerolab](https://aerolab.co/) con la finalidad de poner a prueba las habilidades de desarrollo web.
 
-La siguiente propuesta esta realizada con [React](https://reactjs.org/)React, [Redux](https://redux.js.org/introduction) e [ImmutableJS](https://facebook.github.io/immutable-js/docs/#/).
+La siguiente propuesta esta realizada con [React](https://reactjs.org/), [Redux](https://redux.js.org/introduction) e [ImmutableJS](https://facebook.github.io/immutable-js/docs/#/).
 
 ## Scripts
 * `yarn install` Para instalar dependencias de la aplicación
