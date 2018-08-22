@@ -39,7 +39,7 @@ export const getProducts = async () => {
 }
 
 export const getHistory = async () => {
-  let history = await fetch('https://aerolab-challenge.now.sh/history', {
+  let history = await fetch('https://aerolab-challenge.now.sh/user/history', {
     method: 'GET',
     withCredentials: true,
     headers: {
@@ -82,9 +82,7 @@ export const postProduct = async (id) => {
     method: 'POST',
     withCredentials: true,
     body: JSON.stringify({
-      'productId': {
-        id
-      }
+      'productId': id
     }),
     headers: {
       'Content-Type': 'application/json',

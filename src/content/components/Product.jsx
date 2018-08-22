@@ -106,7 +106,7 @@ class Product extends Component {
                 alt="coin"
               />
             </div>
-            <div className="reedem-buttom" style={styles.reedemButton} onClick={() => handleRedeemProduct(id)} >
+            <div className="reedem-buttom" style={styles.reedemButton} onClick={() => handleRedeemProduct(id, cost)} >
               <p className="reedem-text" style={styles.reedemText}>
                 Reedem now
               </p>

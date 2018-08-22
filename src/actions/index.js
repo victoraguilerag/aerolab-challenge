@@ -14,7 +14,6 @@ export const fetchUser = () => {
     dispatch(updateLoading(true))
     const user = await getUser()
     dispatch(updateUser(user))
-    dispatch(fetchProductList())
   }
 }
 
@@ -27,10 +26,11 @@ export const fetchHistory = () => {
   }
 }
 
-export const redeemProduct = id => {
+export const redeemProduct = (id, cost) => {
   return async (dispatch) => {
     const reedemed = await postProduct(id)
     dispatch(toggleMessage(reedemed.message))
+    dispatch(fetchUser())
     dispatch(updateModal('history'))
     setTimeout(() => dispatch(toggleMessage(' ')), 4000)
   }

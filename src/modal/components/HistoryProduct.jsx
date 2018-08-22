@@ -19,7 +19,8 @@ export class HistoryProduct extends Component {
     } = this.props
     const name = info.get('name')
     const category = info.get('category')
-    const img = info.get('img')
+    const url = info.get('img').get('url')
+    const hdUrl = info.get('img').get('hdUrl')
     const cost = info.get('cost')
     return (
       <div className="product-card" style={styles.productCard} >
@@ -35,8 +36,8 @@ export class HistoryProduct extends Component {
             </div>
         }
         <img
-          src={img.url}
-          srcSet={`${img.hdUrl} 2x`}
+          src={url}
+          srcSet={`${hdUrl} 2x`}
           alt={name}
           style={styles.productImage}
           onLoad={(e) => this.showImage(e)}

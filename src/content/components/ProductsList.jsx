@@ -17,8 +17,8 @@ export class ProductsList extends Component {
     }
     this.props.updateSelectedItem(id)
   }
-  handleRedeemProduct = id => {
-    this.props.redeemProduct(id)
+  handleRedeemProduct = (id, cost) => {
+    this.props.redeemProduct(id, cost)
   }
   render () {
     const {

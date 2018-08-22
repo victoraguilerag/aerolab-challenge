@@ -5,6 +5,7 @@ import CSSTransitionGroup from 'react-addons-css-transition-group'
 import './animations/animations.css'
 import {
   fetchUser,
+  fetchProductList,
   updateModal
 } from './actions/index'
 import './App.css'
@@ -17,7 +18,8 @@ import HomeLoader from './commons/components/Loader.jsx'
 
 class App extends Component {
   async componentDidMount () {
-    this.props.fetchUser()
+    await this.props.fetchUser()
+    await this.props.fetchProductList()
   }
 
   handleModal = mode => {
@@ -94,6 +96,7 @@ const styles = {
 
 App.propTypes = {
   fetchUser: PropTypes.func.isRequired,
+  fetchProductList: PropTypes.func.isRequired,
   updateModal: PropTypes.func.isRequired,
   user: PropTypes.shape({}).isRequired,
   modal: PropTypes.bool.isRequired,
@@ -115,6 +118,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchUser: () => dispatch(fetchUser()),
+    fetchProductList: () => dispatch(fetchProductList()),
     updateModal: mode => dispatch(updateModal(mode))
   }
 }
