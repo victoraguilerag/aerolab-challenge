@@ -13,10 +13,10 @@ export class Modal extends Component {
   handleValueSelected = (value) => {
     this.props.updateSelectedValue(value)
   }
-  handleAddPoints = () => {
+  handleAddPoints = selectedValue => {
     const { showMessage } = this.props
     if (!showMessage) {
-      this.props.addPoints()
+      this.props.addPoints(selectedValue)
     }
   }
   render () {
@@ -49,7 +49,7 @@ Modal.propTypes = {
 const mapDispatchToProps = (dispatch) => {
   return {
     updateSelectedValue: value => dispatch(updateSelectedValue(value)),
-    addPoints: () => dispatch(addPoints())
+    addPoints: points => dispatch(addPoints(points))
   }
 }
 

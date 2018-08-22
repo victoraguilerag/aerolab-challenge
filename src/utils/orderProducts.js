@@ -42,6 +42,15 @@ const orderProducts = (products, filter) => {
       }
       return fromJS(products)
     }
+    case 'Backwards': {
+      let aux = []
+      console.log(products.length)
+      for (let i = products.length - 1; i >= 0; i--) {
+        aux.push(products[i])
+        console.log(aux)
+      }
+      return fromJS(aux)
+    }
     default:
       return fromJS(products)
   }

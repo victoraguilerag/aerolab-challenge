@@ -45,11 +45,11 @@ export const redeemProduct = (id, cost) => {
   }
 }
 
-export const addPoints = () => {
+export const addPoints = points => {
   return async (dispatch) => {
-    const addedPoints = await postPoints()
+    const addedPoints = await postPoints(points)
     dispatch(toggleMessage(addedPoints.message))
-    dispatch(updateUserPoints(addedPoints['new Points']))
+    dispatch(updateUserPoints(addedPoints['New Points']))
     setTimeout(() => {
       dispatch(toggleMessage(' '))
     }, 3000)

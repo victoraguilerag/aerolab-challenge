@@ -6,7 +6,6 @@ import Value from './Value'
 export function AddPoints (props) {
   const { handleAddPoints, handleValueSelected, selectedValue } = props
   const values = [ 1000, 5000, 7500 ]
-
   return (
     <div className="add-points" style={styles.addPoints}>
       <div>
@@ -26,7 +25,7 @@ export function AddPoints (props) {
           }
         </div>
       </div>
-      <div className="reedem-buttom" style={styles.reedemButton} onClick={handleAddPoints}>
+      <div className="reedem-buttom" style={styles.reedemButton} onClick={() => handleAddPoints(selectedValue)}>
         <p className="reedem-text" style={styles.reedemText}>
           Add points
         </p>

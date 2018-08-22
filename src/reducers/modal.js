@@ -1,5 +1,6 @@
 import { fromJS } from 'immutable'
 import actionTypes from '../constants/action-types.js'
+import orderProducts from '../utils/orderProducts'
 
 const {
   UPDATE_MODAL,
@@ -32,7 +33,7 @@ function modal (state = initialState, action) {
     }
     case UPDATE_HISTORY: {
       const { history } = action.payload
-      return state.set('history', fromJS(history))
+      return state.set('history', orderProducts(fromJS(history), 'Backwards'))
     }
     case UPDATE_LOADING_HISTORY: {
       const { loadingHistory } = action.payload

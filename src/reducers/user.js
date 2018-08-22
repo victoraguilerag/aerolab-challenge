@@ -9,7 +9,6 @@ const {
 
 const initialState = fromJS({
   loading: true,
-  user: {},
   message: ''
 })
 
@@ -25,7 +24,7 @@ function user (state = initialState, action) {
     }
     case UPDATE_USER_POINTS: {
       const { points } = action.payload
-      return state.set('points', state.get('points') + points)
+      return state.set('points', points)
     }
     default:
       return state
