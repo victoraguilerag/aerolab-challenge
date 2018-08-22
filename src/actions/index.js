@@ -1,17 +1,26 @@
 import { getUser, getProducts, getHistory, postProduct, postPoints } from '../api'
 import actionTypes from '../constants/action-types.js'
 
-export const fetchProductList = () => {
+export const initialLoad = () => {
   return async (dispatch) => {
+    dispatch(updateLoading(true))
+    const user = await getUser()
+    dispatch(updateUser(user))
     const products = await getProducts()
     dispatch(updateProducts(products))
     dispatch(updateLoading(false))
   }
 }
 
+export const fetchProductList = () => {
+  return async (dispatch) => {
+    const products = await getProducts()
+    dispatch(updateProducts(products))
+  }
+}
+
 export const fetchUser = () => {
   return async (dispatch) => {
-    dispatch(updateLoading(true))
     const user = await getUser()
     dispatch(updateUser(user))
   }
@@ -32,7 +41,7 @@ export const redeemProduct = (id, cost) => {
     dispatch(toggleMessage(reedemed.message))
     dispatch(fetchUser())
     dispatch(updateModal('history'))
-    setTimeout(() => dispatch(toggleMessage(' ')), 4000)
+    setTimeout(() => dispatch(toggleMessage(' ')), 3000)
   }
 }
 
